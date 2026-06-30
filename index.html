@@ -4,9 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nocturne Battlegrounds</title>
-    <link rel="icon" type="image/x-icon" href="assets/logo.png">
-  
-    <link href="./src/output.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="assets/icon1.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,11 +12,21 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet">
 
-  <script src="https://cdn.tailwindcss.com"></script>
+<style>
+  .parallax-center {
+    transform: translate(-50%, calc(-50% + var(--parallax-y, 0px)));
+  }
+
+  .parallax-side {
+    transform: translate(0, calc(-50% + var(--parallax-y, 0px)));
+  }
+</style>
+
 </head>
 
+
 <body class="bg-[#454545]">
-  <header class="md:relative">
+  <header class="absolute left-0 top-0 z-50 w-full">
     <nav class="md:mt-6 font-[Inter]">
       <ul class="hidden md:flex items-center md:justify-center md:gap-5 md:text-sm">
         <li><a href="index.html">CHARACTERS</a></li>
@@ -29,90 +37,132 @@
       </ul>
     </nav>
 
-    <div class="absolute right-12 top-6 hidden items-center font-[Koulen] text-sm md:flex">
+    <div class="absolute right-12 top-12 hidden items-center font-[Koulen] text-sm md:flex">
       <div class="flex items-center gap-2">
         <span class="h-2.5 w-2.5 rounded-full bg-[#028F52]"></span>
         <span class="text-[#CACACA] opacity-70">ONLINE</span><span class="text-[#CACACA] mr-4">10K</span>
 
         <span class="text-[#CACACA] opacity-70">PATCH</span><span class="text-[#CACACA]">V1.0</span>
       </div>
+      </div>
 
   </header>
 
   <main>
-    <section class="relative h-screen overflow-hidden bg-[#454545]">
+    <section class="relative h-screen bg-[#454545]">
   <!-- Center objects -->
-  <h1 class="parallax absolute left-1/2 top-1/2 z-20 -translate-x-1/2 -translate-y-1/2 font-['Koulen'] text-8xl text-black"
-      data-speed="0.12">
-    NOCTURNE BATTLEGROUNDS
+  <h1 class="parallaxtext absolute left-1/2 top-[40%] z-20 parallax-center text-center font-['Koulen'] text-[150px] text-black"
+      data-speed="0.50">
+    <span class="text-[200px]">NOCTURNE</span> BATTLEGROUNDS
   </h1>
 
   <!-- Main center element in front -->
   <img 
-    src="assets/fountainbloodtest 1.png"
-    class="parallax absolute left-1/2 top-1/2 z-40 w-[650px] -translate-x-1/2 -translate-y-1/2"
-    data-speed="0.22"
+    src="assets/animation.gif"
+    class="parallax absolute left-1/2 top-[70%] z-40 w-[1400px] parallax-center"
+    data-speed="0.35"
     alt="Main character"
   >
 
   <!-- Left side layers -->
   <img 
     src="assets/lamp.png" 
-    class="parallax absolute left-0 top-1/2 z-20 -translate-y-1/2"
-    data-speed="0.25"
+    class="parallax absolute left-0 top-[60%] z-40 parallax-side"
+    data-speed="0.22"
     alt=""
   >
 
   <img 
     src="assets/building1left.png" 
-    class="parallax absolute left-0 top-1/2 z-10 -translate-y-1/2"
-    data-speed="0.35"
-    alt=""
-  >
-
-  <img 
-    src="assets/building2left.png" 
-    class="parallax absolute left-0 top-1/2 z-0 -translate-y-1/2"
+    class="parallax absolute left-0 top-[60%] w-[190px] z-30 parallax-side"
     data-speed="0.45"
     alt=""
   >
 
   <img 
+    src="assets/building2left.png" 
+    class="parallax absolute left-0 top-[70%] w-[290px] z-20 parallax-side"
+    data-speed="0.65"
+    alt=""
+  >
+
+  <img 
     src="assets/building3left.png" 
-    class="parallax absolute left-0 top-1/2 z-0 -translate-y-1/2"
-    data-speed="0.55"
+    class="parallax absolute left-[280px] w-[140px] top-[80%] z-10 parallax-side"
+    data-speed="0.85"
     alt=""
   >
 
   <!-- Right side layers -->
   <img 
     src="assets/lamp.png" 
-    class="parallax absolute right-0 top-1/2 z-20 -translate-y-1/2"
-    data-speed="0.25"
-    alt=""
-  >
-
-  <img 
-    src="assets/building1right.png" 
-    class="parallax absolute right-0 top-1/2 z-10 -translate-y-1/2"
-    data-speed="0.35"
-    alt=""
-  >
-
-  <img 
-    src="assets/building2right.png" 
-    class="parallax absolute right-0 top-1/2 z-0 -translate-y-1/2"
+    class="parallax absolute right-0 top-1/2 z-40 parallax-side"
     data-speed="0.45"
     alt=""
   >
 
   <img 
-    src="assets/building3right.png" 
-    class="parallax absolute right-0 top-1/2 z-0 -translate-y-1/2"
+    src="assets/building1right.png" 
+    class="parallax absolute right-0 top-1/2 z-30 parallax-side"
     data-speed="0.55"
     alt=""
   >
+
+  <img 
+    src="assets/building2right.png" 
+    class="parallax absolute right-0 top-1/2 z-20 parallax-side"
+    data-speed="0.65"
+    alt=""
+  >
+
+  <img 
+    src="assets/building3right.png" 
+    class="parallax absolute right-0 top-1/2 z-10 parallax-side"
+    data-speed="0.75"
+    alt=""
+  >
 </section>
+<section class="relative mt-[280px] h-[80vh] z-[50] bg-[#902d2d]"></section>
+
+  <div class="bottom-0 left-0 right-0 h-16 bg-[#222222]"></div>
   </main>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+  const parallaxItems = document.querySelectorAll(".parallax");
+
+  function moveParallax() {
+    const scrollY = window.scrollY;
+
+    parallaxItems.forEach((item) => {
+      const speed = Number(item.dataset.speed || 0);
+      const movement = -scrollY * speed;
+
+      item.style.setProperty("--parallax-y", `${movement}px`);
+    });
+  }
+
+  window.addEventListener("scroll", moveParallax);
+  moveParallax();
+</script>
+
+<script>
+  const parallaxtexts = document.querySelectorAll(".parallaxtext");
+
+  function moveParallax() {
+    const scrollY = window.scrollY;
+
+    parallaxtexts.forEach((item) => {
+      const speed = Number(item.dataset.speed || 0);
+      const movement = scrollY * speed;
+
+      item.style.setProperty("--parallax-y", `${movement}px`);
+    });
+  }
+
+  window.addEventListener("scroll", moveParallax);
+  moveParallax();
+</script>
+
 </body>
 </html>
