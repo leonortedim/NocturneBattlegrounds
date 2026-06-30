@@ -10,6 +10,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Koulen&display=swap" rel="stylesheet">
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet">
 
@@ -17,7 +18,7 @@
 </head>
 
 <body class="bg-[#454545]">
-  <header>
+  <header class="md:relative">
     <nav class="md:mt-6 font-[Inter]">
       <ul class="hidden md:flex items-center md:justify-center md:gap-5 md:text-sm">
         <li><a href="index.html">CHARACTERS</a></li>
@@ -26,8 +27,15 @@
         <li><a href="about.html">DEV LOGS</a></li> 
         <li><a href="index.html">LEADERBOARD</a></li>
       </ul>
-
     </nav>
+
+    <div class="absolute right-12 top-6 hidden items-center font-[Koulen] text-sm md:flex">
+      <div class="flex items-center gap-2">
+        <span class="h-2.5 w-2.5 rounded-full bg-[#028F52]"></span>
+        <span class="text-[#CACACA] opacity-70">ONLINE</span><span class="text-[#CACACA] mr-4">10K</span>
+
+        <span class="text-[#CACACA] opacity-70">PATCH</span><span class="text-[#CACACA]">V1.0</span>
+      </div>
 
   </header>
 
