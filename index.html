@@ -20,6 +20,10 @@
   .parallax-side {
     transform: translate(0, calc(-50% + var(--parallax-y, 0px)));
   }
+
+  .parallax-cover {
+    transform: translateY(var(--parallax-y, 0px));
+  }
 </style>
 
 </head>
@@ -49,90 +53,95 @@
   </header>
 
   <main>
-    <section class="relative h-screen bg-[#454545]">
-  <!-- Center objects -->
-  <h1 class="parallaxtext absolute left-1/2 top-[48%] z-40 parallax-center text-center font-['Koulen'] text-[180px] text-[#101010] leading-[140px]"
-      data-speed="0.50">
-    <span class="text-[285px]">NOCTURNE</span> BATTLEGROUNDS
-  </h1>
+  <section class="relative h-screen bg-[#454545]">
+    <!-- Center objects -->
+    <h1 class="parallaxtext absolute left-1/2 top-[48%] z-[38] parallax-center text-center font-['Koulen'] text-[clamp(105px,13.2vw,210px)] text-[#101010] leading-[clamp(84px,10.2vw,160px)]"
+        data-speed="0.55">
+      <span class="text-[clamp(165px,20.8vw,330px)]">NOCTURNE</span> BATTLEGROUNDS
+    </h1>
 
-  <!-- Main center element in front -->
-  <img 
-    src="assets/animation.gif"
-    class="parallax absolute left-1/2 top-[70%] z-50 w-[1400px] parallax-center"
-    data-speed="0.35"
-    alt="Main character"
-  >
+    <!-- Main center element in front -->
+    <img 
+      src="assets/animation.gif"
+      class="parallax absolute left-1/2 top-[70%] z-50 w-[clamp(850px,102vw,1600px)] parallax-center"
+      data-speed="0.35"
+      alt="Main character"
+    >
 
-   <img 
-    src="assets/redbg.png"
-    class="parallax absolute left-1/2 top-[135%] z-[11] w-screen parallax-center"
-    data-speed="0.65"
-    alt="Main character"
-  >
+    <img 
+      src="assets/redbg.png"
+      class="parallax absolute left-1/2 top-[145%] z-[11] w-[110vw] max-w-none parallax-center"
+      data-speed="0.85"
+      alt=""
+    >
 
-  <!-- Left side layers -->
-  <img 
-    src="assets/lamp.png" 
-    class="parallax absolute left-[190px] top-[95%] w-[50px] z-40 parallax-side"
-    data-speed="0.55"
-    alt=""
-  >
+    <!-- Left side layers -->
+    <img 
+      src="assets/lamp.png" 
+      class="parallax absolute left-[clamp(115px,13.9vw,240px)] top-[95%] w-[clamp(32px,3.65vw,65px)] z-40 parallax-side"
+      data-speed="0.55"
+      alt=""
+    >
 
-  <img 
-    src="assets/building1left.png" 
-    class="parallax absolute left-0 top-[60%] w-[190px] z-30 parallax-side"
-    data-speed="0.45"
-    alt=""
-  >
+    <img 
+      src="assets/building1left.png" 
+      class="parallax absolute left-0 top-[60%] w-[clamp(120px,13.9vw,245px)] z-40 parallax-side"
+      data-speed="0.45"
+      alt=""
+    >
 
-  <img 
-    src="assets/building2left.png" 
-    class="parallax absolute left-0 top-[70%] w-[290px] z-20 parallax-side"
-    data-speed="0.65"
-    alt=""
-  >
+    <img 
+      src="assets/building2left.png" 
+      class="parallax absolute left-0 top-[70%] w-[clamp(190px,21.2vw,370px)] z-20 parallax-side"
+      data-speed="0.65"
+      alt=""
+    >
 
-  <img 
-    src="assets/building3left.png" 
-    class="parallax absolute left-[280px] w-[140px] top-[80%] z-10 parallax-side"
-    data-speed="0.85"
-    alt=""
-  >
+    <img 
+      src="assets/building3left.png" 
+      class="parallax absolute left-[clamp(150px,18.8vw,330px)] top-[80%] w-[clamp(90px,10.2vw,190px)] z-10 parallax-side"
+      data-speed="0.85"
+      alt=""
+    >
 
-  <!-- Right side layers -->
-  <img 
-    src="assets/lamp.png" 
-    class="parallax absolute right-[190px] top-[95%] w-[50px] z-40 parallax-side"
-    data-speed="0.55"
-    alt=""
-  >
+    <!-- Right side layers -->
+    <img 
+      src="assets/lamp.png" 
+      class="parallax absolute right-[clamp(115px,13.9vw,240px)] top-[95%] w-[clamp(32px,3.65vw,65px)] z-40 parallax-side"
+      data-speed="0.55"
+      alt=""
+    >
 
-  <img 
-    src="assets/building1right.png" 
-    class="parallax absolute right-0 top-[60%] w-[190px] z-30 parallax-side"
-    data-speed="0.55"
-    alt=""
-  >
+    <img 
+      src="assets/building1right.png" 
+      class="parallax absolute right-0 top-[60%] w-[clamp(120px,13.9vw,245px)] z-40 parallax-side"
+      data-speed="0.45"
+      alt=""
+    >
 
-  <img 
-    src="assets/building2right.png" 
-    class="parallax absolute right-0 top-[70%] w-[290px] z-20 parallax-side"
-    data-speed="0.65"
-    alt=""
-  >
+    <img 
+      src="assets/building2right.png" 
+      class="parallax absolute right-0 top-[70%] w-[clamp(190px,21.2vw,370px)] z-20 parallax-side"
+      data-speed="0.65"
+      alt=""
+    >
 
-  <img 
-    src="assets/building3right.png" 
-    class="parallax absolute right-[278px] top-[80%] w-[140px] z-10 parallax-side"
-    data-speed="0.75"
-    alt=""
-  >
-</section>
-<section class="relative mt-[100px] h-[100vh] z-[50] bg-[#913030]"></section>
+    <img 
+      src="assets/building3right.png" 
+      class="parallax absolute right-[clamp(150px,18.8vw,330px)] top-[80%] w-[clamp(90px,10.2vw,190px)] z-10 parallax-side"
+      data-speed="0.85"
+      alt=""
+    >
+  </section>
+  <section class="relative h-[100vh] bg-[#913030]">
+    <div
+      class="parallax absolute left-0 top-[55%] z-[39] h-[120vh] w-full bg-[#913030] parallax-cover"
+      data-speed="0.95">
+    </div>
+  </section>
 
   <div class="bottom-0 left-0 right-0 h-16 bg-[#222222]"></div>
-  </main>
+</main>
   <script src="https://cdn.tailwindcss.com"></script>
 
   <script>
