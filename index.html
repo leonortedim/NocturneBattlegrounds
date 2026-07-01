@@ -43,29 +43,117 @@
 
 <body class="bg-[#454545]">
   <header class="absolute left-0 top-0 z-50 w-full">
-    <nav class="md:mt-6 font-[Inter]">
-      <ul class="hidden md:flex items-center md:justify-center md:gap-5 md:text-sm">
-        <li><a href="index.html">CHARACTERS</a></li>
-        <li><a href="about.html">FAQ</a></li>
-        <li class="md:mx-5"><a href="index.html"><img src="assets/logoblack.png" alt="Nocturne Battlegrounds Logo"></a></li>
-        <li><a href="about.html">DEV LOGS</a></li> 
-        <li><a href="index.html">LEADERBOARD</a></li>
-      </ul>
-    </nav>
+  <nav class="font-[Inter] md:mt-6">
+    <!-- Mobile header -->
+    <div class="flex items-center justify-between px-5 pt-5 md:hidden">
+      <a href="index.html">
+        <img class="h-12 w-auto" src="assets/logoblack.png" alt="Nocturne Battlegrounds Logo">
+      </a>
 
-    <div class="absolute right-12 top-12 hidden items-center font-[Koulen] text-sm md:flex">
-      <div class="flex items-center gap-2">
-        <span class="h-2.5 w-2.5 rounded-full bg-[#028F52]"></span>
-        <span class="text-[#CACACA] opacity-70">ONLINE</span><span class="text-[#CACACA] mr-4">10K</span>
+      <button id="menuButton" class="text-3xl text-[#101010]" aria-label="Open menu">
+        ☰
+      </button>
+    </div>
 
-        <span class="text-[#CACACA] opacity-70">PATCH</span><span class="text-[#CACACA]">V1.0</span>
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="hidden px-5 pt-6 md:hidden">
+      <div class="rounded-2xl bg-[#101010]/90 px-6 py-6 font-['Koulen'] text-2xl text-[#EAEAEA]">
+        <div class="flex flex-col gap-4">
+          <a href="index.html">CHARACTERS</a>
+          <a href="about.html">FAQ</a>
+          <a href="about.html">DEV LOGS</a>
+          <a href="index.html">LEADERBOARD</a>
+        </div>
+
+        <div class="mt-6 flex items-center gap-2 text-base">
+          <span class="h-2.5 w-2.5 rounded-full bg-[#028F52]"></span>
+          <span class="text-[#CACACA] opacity-70">ONLINE</span>
+          <span class="mr-4 text-[#CACACA]">10K</span>
+
+          <span class="text-[#CACACA] opacity-70">PATCH</span>
+          <span class="text-[#CACACA]">V1.0</span>
+        </div>
       </div>
-      </div>
+    </div>
 
-  </header>
+    <!-- Desktop nav -->
+    <ul class="hidden items-center justify-center gap-5 text-sm md:flex">
+      <li><a href="index.html">CHARACTERS</a></li>
+      <li><a href="about.html">FAQ</a></li>
+      <li class="mx-5">
+        <a href="index.html">
+          <img src="assets/logoblack.png" alt="Nocturne Battlegrounds Logo">
+        </a>
+      </li>
+      <li><a href="about.html">DEV LOGS</a></li> 
+      <li><a href="index.html">LEADERBOARD</a></li>
+    </ul>
+  </nav>
+
+  <!-- Desktop online info -->
+  <div class="absolute right-12 top-12 hidden items-center font-[Koulen] text-sm md:flex">
+    <div class="flex items-center gap-2">
+      <span class="h-2.5 w-2.5 rounded-full bg-[#028F52]"></span>
+      <span class="text-[#CACACA] opacity-70">ONLINE</span>
+      <span class="mr-4 text-[#CACACA]">10K</span>
+
+      <span class="text-[#CACACA] opacity-70">PATCH</span>
+      <span class="text-[#CACACA]">V1.0</span>
+    </div>
+  </div>
+</header>
 
   <main>
-  <section class="relative h-screen bg-[#454545]">
+
+    <!-- Mobile hero -->
+<!-- Mobile hero -->
+<section class="relative h-screen overflow-hidden bg-[#454545] md:hidden">
+  <h1 class="absolute left-1/2 top-[25%] z-[52] -translate-x-1/2 -translate-y-1/2 text-center font-['Koulen'] text-[14vw] leading-[0.8] text-[#CACACA] min-[400px]:top-[30%] min-[500px]:top-[34%] min-[600px]:top-[38%] sm:top-[40%]">
+    <span class="block text-[22vw]">NOCTURNE</span>
+    BATTLEGROUNDS
+  </h1>
+
+ <!-- Buildings behind -->
+<img 
+  src="assets/building1left.png"
+  class="absolute left-0 top-[45%] z-[51] w-[clamp(90px,24vw,130px)] -translate-y-1/2 min-[400px]:top-[48%] min-[500px]:top-[61%] min-[600px]:top-[64%]"
+  alt=""
+>
+
+<img 
+  src="assets/building1right.png"
+  class="absolute right-0 top-[45%] z-[51] w-[clamp(90px,24vw,130px)] -translate-y-1/2 min-[400px]:top-[48%] min-[500px]:top-[61%] min-[600px]:top-[64%]"
+  alt=""
+>
+
+<img 
+  src="assets/building2left.png"
+  class="absolute left-[-18px] top-[62%] z-10 hidden w-[clamp(120px,30vw,170px)] -translate-y-1/2 min-[500px]:block min-[500px]:top-[76%] min-[600px]:top-[79%]"
+  alt=""
+>
+
+<img 
+  src="assets/building2right.png"
+  class="absolute right-[-18px] top-[62%] z-10 hidden w-[clamp(120px,30vw,170px)] -translate-y-1/2 min-[500px]:block min-[500px]:top-[76%] min-[600px]:top-[79%]"
+  alt=""
+>
+
+  <img 
+    src="assets/animation.gif"
+    class="absolute left-1/2 top-[45%] z-50 w-[200%] max-w-none -translate-x-1/2 -translate-y-1/2 min-[400px]:top-[52%] min-[500px]:top-[62%] min-[600px]:top-[70%] sm:top-[75%]"
+    alt="Main character"
+  >
+
+  <img 
+    src="assets/redbg.png"
+    class="absolute left-1/2 top-[76%] z-[11] w-[160vw] max-w-none -translate-x-1/2 -translate-y-1/2 min-[400px]:top-[96%] min-[500px]:top-[136%] min-[600px]:top-[116%] sm:top-[136%]"
+    alt=""
+  >
+</section>
+
+
+
+  <section class="hidden relative h-screen bg-[#454545] md:block">
     <!-- Center objects -->
     <h1 class="parallaxtext absolute left-1/2 top-[48%] z-[38] parallax-center text-center font-['Koulen'] text-[clamp(105px,13.2vw,210px)] text-[#101010] leading-[clamp(84px,10.2vw,160px)]"
         data-speed="0.55">
@@ -163,19 +251,19 @@
 </section>
 
 <!-- Normal red text section -->
-<section class="relative z-[45] -mt-[380px] bg-[#913030]">
-  <div class="reveal mx-auto max-w-7xl px-8 pt-[7vh] pb-20">
+<section class="relative z-[45] -mt-[440px] bg-[#913030] min-[400px]:-mt-[380px] min-[500px]:-mt-[240px] min-[560px]:-mt-[160px] min-[620px]:-mt-[80px] md:-mt-[380px]">
+  <div class="reveal mx-auto max-w-7xl px-6 pt-16 pb-16 md:px-8 md:pt-[7vh] md:pb-20">
     <div class="text-center">
       <p class="mx-auto w-auto font-['Koulen'] leading-none">
-        <span class="block pl-[98px] text-left text-[52px] text-[#EAEAEA]">
+        <span class="block text-center text-[36px] text-[#EAEAEA] md:pl-[98px] md:text-left md:text-[52px]">
           ARE YOU READY TO
         </span>
 
-        <span class="mt-3 block text-center text-[150px] leading-[0.8] text-[#101010]">
+        <span class="mt-3 block text-center text-[72px] leading-[0.82] text-[#101010] md:text-[150px] md:leading-[0.8]">
           MASTER THE NIGHT?
         </span>
 
-        <span class="mt-6 block text-center font-['DM_Sans'] text-[32.5px] font-normal text-[#EAEAEA]">
+        <span class="mx-auto mt-6 block max-w-[340px] text-center font-['DM_Sans'] text-[18px] font-normal text-[#EAEAEA] md:max-w-none md:text-[32.5px]">
           <span class="font-bold">BATTLE</span> YOUR FRIENDS.
           <span class="font-bold">DOMINATE</span> THE ARENA.
           <span class="font-bold">RUN</span> FROM THE SUN.
@@ -183,7 +271,7 @@
       </p>
     </div>
 
-    <div class="mt-20 flex flex-col items-center">
+    <div class="mt-12 flex flex-col items-center md:mt-20">
       <p class="mb-2 font-['DM_Sans'] text-sm uppercase text-[#101010] opacity-80">
         <span class="font-bold">FREE</span> ON PC AND MOBILE
       </p>
@@ -201,34 +289,32 @@
       </a>
     </div>
   </div>
-
 </section>
 
 
-    <section class="relative z-[45] bg-[#1C1C1C] pt-20">
-      <div class="reveal mx-auto max-w-7xl px-8 pt-[7vh] pb-20">
-        
-    <div class="pl-[98px]">
+    <section class="relative z-[45] overflow-hidden bg-[#1C1C1C] pt-14 md:pt-20">
+  <div class="reveal relative z-[60] mx-auto max-w-7xl px-6 pt-12 pb-10 md:px-8 md:pt-[7vh] md:pb-20">
+    <div class="text-center md:pl-[98px] md:text-left">
       <p class="mx-auto w-auto font-['Koulen'] leading-none">
-        <span class="block text-left text-[42px] text-[#EAEAEA]">
+        <span class="block text-[34px] text-[#EAEAEA] md:text-[42px]">
           MEET
         </span>
 
-        <span class="mt-3 block text-left text-[140px] leading-[0.8] text-[#EAEAEA]">
+        <span class="mt-3 block text-[72px] leading-[0.8] text-[#EAEAEA] md:text-[140px]">
           THE HUNTERS
         </span>
       </p>
-      <span class="block text-left text-[22px] mt-20 font-['DM_Sans'] text-[#EAEAEA]">
-          Every hunter <span class="font-bold">fights</span> differently.
-        </span>
-        <span class="block text-left text-[22px] font-['DM_Sans'] text-[#EAEAEA]">
+
+      <span class="mt-10 block font-['DM_Sans'] text-[18px] text-[#EAEAEA] md:mt-20 md:text-[22px]">
+        Every hunter <span class="font-bold">fights</span> differently.
+      </span>
+
+      <span class="block font-['DM_Sans'] text-[18px] text-[#EAEAEA] md:text-[22px]">
         <span class="font-bold">Find</span> your playstyle and leave your enemies in the <span class="font-bold">dark</span>.
-        </span>
+      </span>
     </div>
 
-    <div class="mt-8 flex flex-col items-start pl-[98px]">
-
-
+    <div class="mt-8 flex flex-col items-center md:items-start md:pl-[98px]">
       <a 
         href="#"
         class="group flex items-center gap-4 rounded-full bg-[#913030] px-8 py-4 font-['Koulen'] text-[28px] leading-none text-white transition-transform duration-300 hover:scale-105"
@@ -241,12 +327,16 @@
         </span>
       </a>
     </div>
+  </div>
 
-            
-          
-    </section>
-    <img class="absolute right-0 -mt-[820px] z-[100]" src="assets/costiel.png" alt="Costiel">
-</main>
+  <img 
+    class="relative z-[50] mx-auto mt-4 w-[min(90vw,420px)] md:hidden md:right-0 md:top-[80px] md:z-[100] md:mt-0 md:w-[clamp(360px,35vw,620px)]" 
+    src="assets/costiel.png" 
+    alt="Costiel"
+  >
+</section>
+<img class="absolute hidden md:block right-0 -mt-[820px] z-[100]" src="assets/costiel.png" alt="Costiel">
+
 </main>
   <script src="https://cdn.tailwindcss.com"></script>
 
@@ -302,7 +392,14 @@
     revealObserver.observe(item);
   });
 </script>
+<script>
+  const menuButton = document.querySelector("#menuButton");
+  const mobileMenu = document.querySelector("#mobileMenu");
 
+  menuButton.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+</script>
 
 </body>
 </html>
